@@ -131,11 +131,11 @@ export default function Create() {
 	const categories = [
   {
     value: '1',
-    label: 'SelfMovie',
+    label: 'c1',
   },
   {
     value: '2',
-    label: 'SelfMusic',
+    label: 'c2',
   },
 ];
 
