@@ -13,8 +13,7 @@ function App() {
 
 	useEffect(() => {
 		setAppState({ loading: true });
-		const apiUrl = 'https://my-blog-backend-delta.vercel.app/post/';
-		// const apiUrl = 'http://127.0.0.1:8000/post';
+		const apiUrl = 'http://127.0.0.1:8000/post/';
 		fetch(apiUrl)
 			.then((data) => data.json())
 			.then((posts) => {

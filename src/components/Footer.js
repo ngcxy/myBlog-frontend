@@ -11,12 +11,13 @@ const useStyles = makeStyles()((theme) => {
 		footer: {
 			borderTop: `1px solid ${theme.palette.divider}`,
 			marginTop: theme.spacing(8),
+			paddingTop: theme.spacing(3),
 			paddingBottom: theme.spacing(3),
 			backgroundColor: '#fafafa',
-			// [theme.breakpoints.up('sm')]: {
-			// 	paddingTop: theme.spacing(6),
-			// 	paddingBottom: theme.spacing(6),
-			// },
+			[theme.breakpoints.up('sm')]: {
+				paddingTop: theme.spacing(6),
+				paddingBottom: theme.spacing(6),
+			},
 		},
 	};
 });
@@ -57,11 +58,7 @@ function Footer() {
 	const { classes } = useStyles();
 	return (
 		<React.Fragment>
-			<Container
-				component="footer"
-				className={classes.footer}
-				maxWidth={false}
-			>
+			<Container component="footer" className={classes.footer}>
 				{/*<Grid container spacing={4} justify="space-evenly">*/}
 				{/*	{footers.map((footer) => (*/}
 				{/*		<Grid item xs={6} sm={3} key={footer.title}>*/}
