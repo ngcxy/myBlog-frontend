@@ -2,7 +2,28 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = app => {
     app.use(
-        createProxyMiddleware('/users',
+        createProxyMiddleware('/post',
+            {
+                target: "https://my-blog-backend-delta.vercel.app",
+                changeOrigin: true
+            })
+    )
+    app.use(
+        createProxyMiddleware('/api/token',
+            {
+                target: "https://my-blog-backend-delta.vercel.app",
+                changeOrigin: true
+            })
+    )
+    app.use(
+        createProxyMiddleware('/api/token/blacklist',
+            {
+                target: "https://my-blog-backend-delta.vercel.app",
+                changeOrigin: true
+            })
+    )
+    app.use(
+        createProxyMiddleware('/users/create',
             {
                 target: "https://my-blog-backend-delta.vercel.app",
                 changeOrigin: true
