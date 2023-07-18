@@ -5,28 +5,28 @@ module.exports = app => {
         createProxyMiddleware('/post',
             {
                 target: "https://my-blog-backend-delta.vercel.app",
-                changeOrigin: true
+                changeOrigin: false
             })
     )
     app.use(
         createProxyMiddleware('/api/token',
             {
                 target: "https://my-blog-backend-delta.vercel.app",
-                changeOrigin: true
+                changeOrigin: false
             })
     )
     app.use(
         createProxyMiddleware('/api/token/blacklist',
             {
                 target: "https://my-blog-backend-delta.vercel.app",
-                changeOrigin: true
+                changeOrigin: false
             })
     )
     app.use(
         createProxyMiddleware('/users/create',
             {
                 target: "https://my-blog-backend-delta.vercel.app",
-                changeOrigin: true
+                changeOrigin: false
             })
     )
 }
