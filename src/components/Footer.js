@@ -58,7 +58,11 @@ function Footer() {
 	const { classes } = useStyles();
 	return (
 		<React.Fragment>
-			<Container component="footer" className={classes.footer}>
+			<Container
+				component="footer"
+				className={classes.footer}
+				maxWidth={false}
+			>
 				{/*<Grid container spacing={4} justify="space-evenly">*/}
 				{/*	{footers.map((footer) => (*/}
 				{/*		<Grid item xs={6} sm={3} key={footer.title}>*/}
