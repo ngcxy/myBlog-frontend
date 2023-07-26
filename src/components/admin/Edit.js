@@ -74,10 +74,10 @@ export default function Create() {
 			excerpt: formData.excerpt,
 			content: formData.content,
 		});
-		history.push({
-			pathname: '/admin/',
-		});
-		window.location.reload();
+		// history.push({
+		// 	pathname: '/admin/',
+		// });
+		// window.location.reload();
 	};
 
 	const { classes } = useStyles();
