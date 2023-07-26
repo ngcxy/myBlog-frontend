@@ -105,7 +105,7 @@ function Header(){
 								underline="none"
 								color="textPrimary"
 							>
-								Brilliant Blog
+								BlogStract
 							</Link>
 						</Typography>
 						<nav>
