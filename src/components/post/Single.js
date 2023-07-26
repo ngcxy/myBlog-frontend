@@ -46,6 +46,7 @@ export default function Post() {
 						variant="h2"
 						align="center"
 						color="textPrimary"
+						style={{whiteSpace: 'pre-line'}}
 						gutterBottom
 					>
 						{data.posts.title}{' '}
@@ -54,6 +55,7 @@ export default function Post() {
 						variant="h5"
 						align="center"
 						color="textSecondary"
+						style={{whiteSpace: 'pre-line'}}
 						paragraph
 					>
 						{data.posts.excerpt}{' '}
@@ -62,6 +64,7 @@ export default function Post() {
 						variant="subtitle1"
 						align="inherit"
 						color="textPrimary"
+						style={{whiteSpace: 'pre-line'}}
 						paragraph
 					>
 						{data.posts.content}{' '}

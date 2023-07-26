@@ -48,7 +48,7 @@ const Posts = (props) => {
 	console.log(props);
 	const { posts } = props;
 	const { classes } = useStyles();
-	if (!posts || posts.length === 0 || posts[0] == undefined)
+	if (!posts || posts.length === 0 || posts[0] === undefined)
 		return (
 			<React.Fragment>
 			<Container maxWidth="md" component="main">
@@ -83,8 +83,7 @@ const Posts = (props) => {
 						<Table stickyHeader aria-label="sticky table">
 							<TableHead>
 								<TableRow>
-									<TableCell>Id</TableCell>
-									<TableCell align="left">Category</TableCell>
+									<TableCell>Category</TableCell>
 									<TableCell align="left">Title</TableCell>
 									<TableCell align="left">Action</TableCell>
 								</TableRow>
@@ -94,9 +93,8 @@ const Posts = (props) => {
 									return (
 										<TableRow>
 											<TableCell component="th" scope="row">
-												{post.id}
+												{post.category}
 											</TableCell>
-											<TableCell align="left">{post.category}</TableCell>
 
 											<TableCell align="left">
 												<Link

@@ -129,14 +129,22 @@ export default function Create() {
 	const { classes } = useStyles();
 
 	const categories = [
-  {
-    value: '1',
-    label: 'SelfMovie',
-  },
-  {
-    value: '2',
-    label: 'SelfMusic',
-  },
+	{
+		value: 'Tech',
+		label: 'Tech',
+	},
+	{
+		value: 'Lifestyle',
+		label: 'Lifestyle',
+	},
+	{
+		value: 'Art',
+		label: 'Art',
+	},
+	{
+		value: 'Other Story',
+		label: 'Other Story',
+	},
 ];
 
 	return (
