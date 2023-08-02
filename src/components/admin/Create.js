@@ -130,19 +130,19 @@ export default function Create() {
 
 	const categories = [
 	{
-		value: 'Tech',
+		value: 3,
 		label: 'Tech',
 	},
 	{
-		value: 'Lifestyle',
+		value: 4,
 		label: 'Lifestyle',
 	},
 	{
-		value: 'Art',
+		value: 5,
 		label: 'Art',
 	},
 	{
-		value: 'Other Story',
+		value: 6,
 		label: 'Other Story',
 	},
 ];
