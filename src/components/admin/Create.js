@@ -96,7 +96,7 @@ export default function Create() {
 		formData.append('title', postData.title);
 		formData.append('slug', postData.slug);
 		formData.append('category' , postData.category)
-		formData.append('author', '1');
+		formData.append('author', localStorage.getItem('userid'));
 		formData.append('excerpt', postData.excerpt);
 		formData.append('content', postData.content);
 		formData.append('image', postImage.image);

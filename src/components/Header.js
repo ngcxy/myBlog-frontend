@@ -142,7 +142,6 @@ function Header(){
 				localStorage.setItem('username', userData[0].username);
 				localStorage.setItem('userid', userData[0].id);
 				window.location.reload();
-				console.log(localStorage);
 			})
 		}
 
