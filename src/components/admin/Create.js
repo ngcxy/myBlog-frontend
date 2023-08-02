@@ -104,10 +104,10 @@ export default function Create() {
 		const config = {headers: { 'Content-Type': 'multipart/form-data' } };
 		axiosInstance.post(`post/admin/create/`, formData, config);
 
-		history.push({
-			pathname: '/admin/',
-		});
-		window.location.reload();
+		// history.push({
+		// 	pathname: '/admin/',
+		// });
+		// window.location.reload();
 	};
 
 	// const config = { headers: { 'Content-Type': 'multipart/form-data' } };
