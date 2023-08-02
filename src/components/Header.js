@@ -68,7 +68,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function Header(){
-	console.log(localStorage.getItem('username'));
+	console.log(localStorage);
 	const { classes } = useStyles();
 	let history = useHistory();
 
@@ -138,7 +138,9 @@ function Header(){
 		if (localStorage.getItem('username') === null){
 			axiosInstance.get(`users/list/`).then((res) => {
 				const userData = res.data.filter((user) => user.email === localStorage.getItem('email'));
+				console.log(userData[0]);
 				localStorage.setItem('username', userData[0].username);
+				localStorage.setItem('userid', userData[0].id);
 				window.location.reload();
 				console.log(localStorage);
 			})
