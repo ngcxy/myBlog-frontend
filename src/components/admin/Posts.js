@@ -48,6 +48,14 @@ const Posts = (props) => {
 	console.log(props);
 	const { posts } = props;
 	const { classes } = useStyles();
+	const showCategory = (id) => {
+		switch(id) {
+			case 3: return "Tech";
+			case 4: return "Lifestyle";
+			case 5: return "Art";
+			default: return "Other Story";
+		}
+	}
 	if (!posts || posts.length === 0 || posts[0] === undefined)
 		return (
 			<React.Fragment>
@@ -93,7 +101,7 @@ const Posts = (props) => {
 									return (
 										<TableRow>
 											<TableCell component="th" scope="row">
-												{post.category}
+												{showCategory(post.category)}
 											</TableCell>
 
 											<TableCell align="left">
