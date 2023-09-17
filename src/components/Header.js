@@ -67,17 +67,23 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
-	const tokenVerify = (e) => {
-		e.preventDefault();
-
+	const tokenVerify = () => {
+		axiosInstance.defaults.headers['Authorization'] =null;
 		axiosInstance
 			.post(`api/token/verify/`, {
-				Token: localStorage.getItem('RefreshToken'),
+				token: localStorage.getItem('RefreshToken'),
 			})
 			.then((res) => {
-				console.log(res.data)
+			})
+			.catch((err) => {
+				if (err.code === "ERR_BAD_REQUEST"){
+					localStorage.removeItem('RefreshToken');
+					localStorage.removeItem('AccessToken');
+				}
+				else {
+					axiosInstance.defaults.headers['Authorization'] ='JWT ' + localStorage.getItem('AccessToken');
+				}
 			});
-
 	};
 
 function Header(){
@@ -97,6 +103,7 @@ function Header(){
 		&& localStorage.getItem('RefreshToken') !== undefined){
 		tokenVerify();
 	}
+	console.log(localStorage);
 
 	if (localStorage.getItem('AccessToken') === undefined
 		|| localStorage.getItem('AccessToken') === null ){
