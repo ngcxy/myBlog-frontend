@@ -68,7 +68,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function Header(){
-	// console.log(localStorage);
+	console.log(localStorage);
 	const { classes } = useStyles();
 	let history = useHistory();
 
