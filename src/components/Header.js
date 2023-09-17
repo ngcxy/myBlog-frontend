@@ -67,6 +67,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
+	const tokenVerify = (e) => {
+		e.preventDefault();
+
+		axiosInstance
+			.post(`api/token/verify/`, {
+				Token: localStorage.getItem('RefreshToken'),
+			})
+			.then((res) => {
+				console.log(res.data)
+			});
+
+	};
+
 function Header(){
 	console.log(localStorage);
 	const { classes } = useStyles();
@@ -80,6 +93,10 @@ function Header(){
 	// 	});
 	// 	window.location.reload();
 	// };
+	if (localStorage.getItem('RefreshToken') !== null
+		&& localStorage.getItem('RefreshToken') !== undefined){
+		tokenVerify();
+	}
 
 	if (localStorage.getItem('AccessToken') === undefined
 		|| localStorage.getItem('AccessToken') === null ){
