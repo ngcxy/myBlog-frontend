@@ -6,6 +6,7 @@ function PostLoading(Component) {
 		return (
 			<p style={{ fontSize: '25px' }}>
 				Loading...
+				<br></br>
 				(This might take some time as I'm using free tier supabase!)
 			</p>
 		);
