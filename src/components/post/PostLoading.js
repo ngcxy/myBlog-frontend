@@ -7,7 +7,7 @@ function PostLoading(Component) {
 			<p style={{ fontSize: '25px' }}>
 				Loading...
 				<br></br>
-				(This might take some time as I'm using free tier supabase!)
+				(Remind me if content can't be loaded. Supabase pauses database inactive for 30 days.)
 			</p>
 		);
 	};
